@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Parametrização Início Novo Projeto</h1>
+        <form id="cadastro-form">
+            <div class="half-box spacing">
+                <label for="razao-cliente">Razão Social Cliente</label>
+                <input type="text" minlength="3" name="razao-cliente" id="razao-cliente" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="fantasia-cliente">Nome Fantasia Cliente</label>
+                <input type="text" minlength="3" name="fantasia-cliente" id="fantasia-cliente" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="cnpj-cliente">CNPJ Cliente</label>
+                <input type="text" name="cnpj-cliente" id="cnpj-cliente" maxlength="18">
+            </div>
+            <div class="half-box spacing">
+                <label for="endereco-cliente">Endereço Cliente</label>
+                <input type="text" name="endereco-cliente" id="endereco-cliente" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="razao-empresa">Razão Social Empresa</label>
+                <input type="text" name="razao-empresa" id="razao-empresa" minlength="3" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="fantasia-empresa">Nome Fantasia Empresa</label>
+                <input type="text" name="fantasia-empresa" id="fantasia-empresa" minlength="3" required> 
+            </div>
+            <div class="half-box spacing">
+                <label for="cnpj-empresa">CNPJ Empresa</label>
+                <input type="text" name="cnpj-empresa" id="cnpj-empresa" maxlength="18">
+            </div>
+            <div class="half-box spacing">
+                <label for="endereco-empresa">Endereço Empresa</label>
+                <input type="text" name="endereco-empresa" id="endereco-empresa" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="url-bi">URL BI</label>
+                <input type="text" name="url-bi" id="url-bi">
+                <div class="pass-roles">
+                    <p class="url">Url inválida</p>
+                </div>
+            </div>
+            <div class="half-box spacing">
+                <label for="diautil-bi">Dia Ùtil Virada BI</label>
+                <input type="text" name="diautil-bi" id="diautil-bi" placeholder="Ex: Quinto dia útil: Digite 5." maxlength="2">
+            </div>
+            <div class="half-box spacing">
+                <label for="segmento-mercado">Segmento de Mercado</label>
+                <input type="text" name="segmento-mercado" id="segmento-mercado" minlength="3" required>
+                <div class="pass-roles">
+                    <p class="segMer">Mínimo 3 caracteres</p>
+                </div>
+            </div>
+            <div class="half-box spacing">
+                <label for="tipo-servico">Tipo de Serviço</label>
+                <select name="tipo-servico" id="tipo-servico" required>
+                    <option value="">Selecione</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+              
+            </div>
+            <div class="half-box spacing">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required minlength="3">
+                <div class="pass-roles">
+                    <p class="nome">Mínimo 3 caracteres</p>
+                </div>
+            </div>
+            <div class="half-box spacing">
+                <label for="departamento-user">Departamento Usuário</label>
+                <input type="text" name="departamento-user" id="departamento-user" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" maxlength="14" required>
+            </div>
+            <div class="half-box spacing">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="half-box spacing pass">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required minlength="8">
+                <div id="ver"></div>
+                <div class="pass-roles">
+                    <p class="especial">Mínimo 1 caractere especial</p>
+                    <p class="numero">Mínimo 1 número</p>
+                    <p class="maiuscula">Mínimo 1 letra maiúscula</p>
+                    <p class="minuscula">Mínimo 1 letra minúscula</p>
+                    <p class="mincaractere">Mínimo 8 caracteres</p>
+                </div>
+            </div>
+            <div class="half-box spacing">
+                <label for="senha-confirmar">Confirmar Senha</label>
+                <input type="password" name="senha-confirmar" id="senha-confirmar">
+                <div class="pass-roles">
+                    <p class="resSenha">Senhas não conferem</p>
+                </div>
+            </div>
+
+            <div class="full-box">
+                <input type="submit" id="submit-button" value="Cadastrar" disabled>
+            </div>
+        </form>
+    </div>
+    <p class="error-validation template"></p>
+
+    <script type="text/javascript" src="scriptform.js"></script>
+</body>
+</html>

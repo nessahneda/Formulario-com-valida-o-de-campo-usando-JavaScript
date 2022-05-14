@@ -1,0 +1,151 @@
+/* geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+}
+
+input, label, select{
+    display: block;
+    width: 100%;
+}
+
+input:focus, label:focus{
+    outline:none;
+}
+
+a{
+    color:#00ffff;
+}
+
+body{
+    padding-top: 5vh;
+    background: linear-gradient(110deg, rgb(50, 50, 53), rgb(0, 79, 140),rgb(50, 50, 53));
+}
+
+/* formulario */
+
+#main-container{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+#main-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem; /* root */
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-box{
+    flex: 1 1 100%;
+    position: relative;
+}
+
+.half-box{
+    flex: 1 1 45%;
+    position:relative;
+}
+
+.spacing{
+    margin-right: 2.5%;
+
+}
+
+.label{
+    font-weight: bold;
+    font-size: .8rems;
+}
+
+input, select{
+    border-bottom: 3px solid #3a3a3a ;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+input:focus {
+    border-color:  rgb(0, 163, 169);
+}
+
+select:focus{
+    border-color:  rgb(0, 163, 169);
+}
+
+input[type="submit"]{
+    background-color:rgb(0, 163, 169);
+    color: #fff;
+    border:  none;
+    border-radius: 15px;
+    height: 40px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* validações */
+
+.error-validation{
+    color: rgb(196, 0, 0);
+    position: absolute;
+    top: 50px;
+    font-size: .8rem;
+}
+
+.template{
+    display:none;
+}
+.pass-roles {
+    margin-top: -35px;
+    margin-bottom: 15px;
+}
+.pass-roles p {
+    font-size: 14px;
+}
+.success {
+    color: green;
+    font-weight: bold;
+}
+.pass {
+    position: relative;
+}
+#ver {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    background: url("visibility.png") #fff no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    background-origin: content-box;
+    padding: 5px;
+  }
+  #submit-button:disabled {
+      cursor: no-drop;
+      background-color: #CCCCCC;
+  }
+  #submit-button {
+    background-color:rgb(0, 163, 169);
+  }
+  .url, .segMer, .nome {
+      color: red;
+      font-weight: bold;
+      display: none;
+  }
